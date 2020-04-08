@@ -24,6 +24,10 @@ India Statewise Statistics API : <https://api.rootnet.in/covid19-in/unofficial/c
 World Satistics API : <https://covidapi.info/api/v1/global><br />
 
 
+### Acknowledgement
+
+This project would not have been possible without [covid19india.org].(https://covid19india.org)<br />
+
 ## Screenshots
 
 [Screenshot #1](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/menu.PNG)<br />
