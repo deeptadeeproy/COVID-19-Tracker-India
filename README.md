@@ -1,26 +1,49 @@
 # COVID-19-Tracker-India-Windows-
-A simple, fast program to get various kinds of information about the status of COVID-19 in India
 
+A simple, fast program to get various kinds of information about the status of COVID-19 in India
 This program has been written in Python 3 and converted to exe.
 
-User menu :
+
+##Libraries
+
+The following python standard libraries has been used:
+
+os               Markup :  <https://docs.python.org/3/library/os.html>
+urllib.request   Markup :  <https://docs.python.org/3/library/urllib.request.html#module-urllib.request>
+urllib.error     Markup :  <https://docs.python.org/3/library/urllib.error.html#module-urllib.error>
+json             Markup :  <https://docs.python.org/3/library/json.html>
+webbrowser       Markup :  <https://docs.python.org/3/library/webbrowser.html>
+
+
+##Use of public APIs
+
+The following APIs have been used:
+
+Markup :  [India Postal PIN code API](http://www.postalpincode.in/Api-Details "India Post Postal PIN code API Details")
+Markup :  [India Statewise Statistics API](https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise "India Unofficial Statewise COVID-19 Statistics")
+Markup :  [World Satistics API](https://covidapi.info/api/v1/global "World COVID-19 Statistics")
+
+
+##Screenshots
+
+####User Menu :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/menu.PNG)
 
-Option 1 :
-
+####Option One :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option1.PNG)
 
-Option 2 :
-
+####Option Two :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option2.PNG)
 
-Option 3 :
-
+####Option Three :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option3.PNG)
 
-Option 4 :
-
+####Option Four :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option4.PNG)
 
 
-************END OF README**************
+##License
+
+This repository uses the [MIT License](/LICENSE).
+
+**END OF README
