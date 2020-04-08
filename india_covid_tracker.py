@@ -119,6 +119,7 @@ def statewise():
 def patdataopen():
     webbrowser.open("https://docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml")
     print("Redirected to web browser.")
+    
 def user_menu():
     choice = input("\nEnter an option number:-\n1. View number of cases by PIN code\n2. View India's status report\n3. View World's status report\n4. View statewise report\n5. View COVID-19 patients database- Open in browser\n\nWaiting for user input: ")
     if choice:
@@ -149,7 +150,7 @@ def user_menu():
 def clear_screen():
     if os.name == "nt":
         os.system('cls')
-    elif os.name == "mac" or os.name == "mac":
+    elif os.name == "mac" or os.name == "linux":
         os.system('clear')
 
 def reruns():
