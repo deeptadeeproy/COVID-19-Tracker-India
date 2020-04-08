@@ -26,20 +26,11 @@ The following APIs have been used:
 
 ## Screenshots
 
-#### User Menu :
-![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/menu.PNG)
-
-#### Option One :
-![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option1.PNG)
-
-#### Option Two :
-![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option2.PNG)
-
-#### Option Three :
-![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option3.PNG)
-
-#### Option Four :
-![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option4.PNG)
+[Screenshot #1](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/menu.PNG)<br />
+[Screenshot #2](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option1.PNG)<br />
+[Screenshot #3](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option2.PNG)<br />
+[Screenshot #4](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option3.PNG)<br />
+[Screenshot #5](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option4.PNG)
 
 
 ## License
