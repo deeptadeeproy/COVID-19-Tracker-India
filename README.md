@@ -1,4 +1,4 @@
-# COVID-19-Tracker-India-Windows-
+# COVID-19 Tracker India Windows
 
 A simple, fast program to get various kinds of information about the status of COVID-19 in India.<br />
 This program has been written in Python 3 and converted to exe.
@@ -17,11 +17,11 @@ webbrowser      : <https://docs.python.org/3/library/webbrowser.html><br />
 
 ## Use of public APIs
 
-The following APIs have been used:
+The following APIs have been used in this piece of software:
 
-[India Postal PIN code API](http://www.postalpincode.in/Api-Details "India Post Postal PIN code API Details")<br />
-[India Statewise Statistics API](https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise "India Unofficial Statewise COVID-19 Statistics")<br />
-[World Satistics API](https://covidapi.info/api/v1/global "World COVID-19 Statistics")<br />
+India Postal PIN code API : <http://www.postalpincode.in/Api-Details><br />
+India Statewise Statistics API : <https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise><br />
+World Satistics API : <https://covidapi.info/api/v1/global><br />
 
 
 ## Screenshots
