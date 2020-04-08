@@ -1,4 +1,4 @@
-# COVID-19 Tracker India Windows
+# COVID-19 Tracker India
 
 A simple, fast program to get various kinds of information about the status of COVID-19 in India.<br />
 This program has been written in Python 3 and converted to exe.
