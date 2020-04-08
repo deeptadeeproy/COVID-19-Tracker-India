@@ -151,7 +151,7 @@ def user_menu():
 def clear_screen():
     if os.name == "nt":
         os.system('cls')
-    elif os.name == "mac" or os.name == "linux":
+    elif os.name == "posix" or os.name == "linux":
         os.system('clear')
 
 def reruns():
