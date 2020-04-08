@@ -4,7 +4,7 @@ A simple, fast program to get various kinds of information about the status of C
 This program has been written in Python 3 and converted to exe.
 
 
-##Libraries
+## Libraries
 
 The following python standard libraries has been used:
 
@@ -15,7 +15,7 @@ json             Markup :  <https://docs.python.org/3/library/json.html>
 webbrowser       Markup :  <https://docs.python.org/3/library/webbrowser.html>
 
 
-##Use of public APIs
+## Use of public APIs
 
 The following APIs have been used:
 
@@ -24,25 +24,25 @@ Markup :  [India Statewise Statistics API](https://api.rootnet.in/covid19-in/uno
 Markup :  [World Satistics API](https://covidapi.info/api/v1/global "World COVID-19 Statistics")
 
 
-##Screenshots
+## Screenshots
 
-####User Menu :
+#### User Menu :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/menu.PNG)
 
-####Option One :
+#### Option One :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option1.PNG)
 
-####Option Two :
+#### Option Two :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option2.PNG)
 
-####Option Three :
+#### Option Three :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option3.PNG)
 
-####Option Four :
+#### Option Four :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option4.PNG)
 
 
-##License
+## License
 
 This repository uses the [MIT License](/LICENSE).
 
