@@ -1,7 +1,7 @@
 # COVID-19 Tracker India
 
 A simple, fast program to get various kinds of information about the status of COVID-19 in India.<br />
-This program has been written in Python 2 and converted to exe.
+This program has been written in Python and converted to exe for hassle free execution on Windows PCs.
 
 
 ## Libraries
@@ -26,7 +26,8 @@ World Satistics API : <https://covidapi.info/api/v1/global><br />
 
 ### Acknowledgement
 
-This project would not have been possible without [covid19india.org](https://covid19india.org).
+This project would not have been possible without [covid19india.org](https://covid19india.org).<br />
+The original Python script for this project has been converted to an exe file using [pyinstaller](https://codeigo.com/python/convert-py-to-exe).
 
 
 ## Screenshots
