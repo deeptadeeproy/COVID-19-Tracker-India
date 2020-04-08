@@ -1,6 +1,8 @@
 # COVID-19-Tracker-India-Windows-
 A simple, fast program to get various kinds of information about the status of COVID-19 in India
 
+This program has been written in Python 3 and converted to exe.
+
 User menu :
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/menu.PNG)
 
@@ -19,3 +21,6 @@ Option 3 :
 Option 4 :
 
 ![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/option4.PNG)
+
+
+--------------------------------------------------------END OF README--------------------------------------------------------------------
