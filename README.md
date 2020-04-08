@@ -26,7 +26,9 @@ World Satistics API : <https://covidapi.info/api/v1/global><br />
 
 ### Acknowledgement
 
-This project would not have been possible without [covid19india.org].(https://covid19india.org)<br />
+This project would not have been possible without : [covid19india.org](https://covid19india.org)
+[covid19india.org](https://covid19india.org)
+
 
 ## Screenshots
 
