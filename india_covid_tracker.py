@@ -125,6 +125,7 @@ def user_menu():
     if choice:
         if type(choice) == int:
             choice = str(choice)
+            
         if choice == "1":
             clear_screen()
             for_area()
