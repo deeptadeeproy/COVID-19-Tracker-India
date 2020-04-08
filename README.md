@@ -10,7 +10,7 @@ Option 1 :
 
 Option 2 :
 
-![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/oprtion2.PNG)
+![alt text](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/option2.PNG)
 
 Option 3 :
 
