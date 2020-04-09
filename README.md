@@ -1,4 +1,4 @@
-# COVID-19 Tracker India : [View on Github](https://github.com/deeptadeeproy/COVID-19-Tracker-India)
+# COVID-19 Tracker for India
 
 A simple, fast program to get various kinds of information about the status of COVID-19 in India.<br />
 This program has been written in Python3 and a batch file is included for hassle free execution on Windows PCs.
