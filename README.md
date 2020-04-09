@@ -32,7 +32,7 @@ The original Python script for this project has been converted to an exe file us
 
 ## Screenshots
 
-Screenshots for the program can be downloaded from [here](https://github.com/deeptadeeproy/COVID-19-Tracker-India/tree/master/Screenshots).
+Screenshots of the program can be downloaded from [here](https://github.com/deeptadeeproy/COVID-19-Tracker-India/tree/master/Screenshots).
 
 
 ## Pull Requests
