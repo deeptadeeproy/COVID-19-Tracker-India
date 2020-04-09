@@ -22,7 +22,6 @@ def countDigit(n):
 # Function Definitions
 def get_data(url):
     try:
-        print("\nPlease wait...requesting data...")
         req = urllib.request.Request(url)
         response = urllib.request.urlopen(req)
         if response.getcode() == 200:
@@ -63,6 +62,7 @@ def for_area():
     if type(postCode) == int:
         postCode = str(postCode)
     if postCode.isnumeric() and len(postCode) == 6:
+        print("\nPlease wait... Requesting data...")
         get_data("https://api.postalpincode.in/pincode/" + postCode)
         if success:
             arrange_address()
@@ -80,6 +80,7 @@ def for_area():
 
 def status_ind():
     global jsonData
+    print("\nPlease wait... Requesting data...")
     get_data("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
     if success:
         lastRefreshed = jsonData["data"]["lastRefreshed"]
@@ -88,7 +89,7 @@ def status_ind():
         deaths = jsonData["data"]["total"]["deaths"]
         active = jsonData["data"]["total"]["active"]
         print(f'''
-COVID-19 status report (India) as of {lastRefreshed}
+COVID-19 STATUS REPORT (INDIA) AS OF {lastRefreshed}
 ----------
 Confirmed: {confirmed}
 Recovered: {recovered}
@@ -99,6 +100,7 @@ Active: {active}
 
 def status_wor():
     global jsonData
+    print("\nPlease wait... Requesting data...")
     get_data("https:covidapi.info/api/v1/global")
     if success:
         lastRefreshed = jsonData["date"]
@@ -107,7 +109,7 @@ def status_wor():
         deaths = jsonData["result"]["deaths"]
         active = confirmed - (recovered + deaths)
         print(f'''
-COVID-19 status report (World) as of {lastRefreshed}
+COVID-19 STATUS (WORLD) AS OF {lastRefreshed}
 ----------
 Confirmed: {confirmed}
 Recovered: {recovered}
@@ -119,18 +121,19 @@ Active: {active}
 def statewise():
     global jsonData
     key = input("\nEnter name of state or union territory: ")
-    key = key.title()
+    print("\nPlease wait... Requesting data...")
     get_data("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
     if success:
         boolFound = False
-        for i in range(36):
-            if jsonData["data"]["statewise"][i]["state"] == key:
+        for i in range(len(jsonData["data"]["statewise"])):
+            if jsonData["data"]["statewise"][i]["state"].title() == key.title():
+                key = jsonData["data"]["statewise"][i]["state"]
                 boolFound = True
                 confirmed = jsonData["data"]["statewise"][i]["confirmed"]
                 recovered = jsonData["data"]["statewise"][i]["recovered"]
                 deaths = jsonData["data"]["statewise"][i]["deaths"]
                 active = jsonData["data"]["statewise"][i]["active"]
-                print(f"\nCOVID-19 status report ({key}, India)")
+                print(f"\nCOVID-19 STATUS REPORT ({key.upper()}, INDIA)")
                 print(f"----------\nConfirmed: {confirmed}")
                 print(f"Recovered: {recovered}")
                 print(f"Deaths: {deaths}")
@@ -141,58 +144,58 @@ def statewise():
 
 def patdataopen():
     webbrowser.open("docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml")
-    print("Redirected to web browser.")
+    print("Redirected to web browser...")
 
 
 def help_num():
-    listHelp = {
-        "Andhra Pradesh":"08662410978",
-        "Arunachal Pradesh":"9436055743",
-        "Assam":"6913347770",
-        "Bihar":"104",
-        "Chhattisgarh":"104",
-        "Goa":"104",
-        "Gujarat":"104",
-        "Haryana":"8558893911",
-        "Himachal Pradesh":"104",
-        "Jharkhand":"104",
-        "Karnataka":"104",
-        "Kerala":"04712552056",
-        "Madhya Pradesh":"104",
-        "Maharashtra":"02026127394",
-        "Manipur":"3852411668",
-        "Meghalaya":"108",
-        "Mizoram":"102",
-        "Nagaland":"7005539653",
-        "Odisha":"9439994859",
-        "Punjab":"104",
-        "Rajasthan":"01412225624",
-        "Sikkim":"104",
-        "Tamil Nadu":"04429510500",
-        "Telangana":"104",
-        "Tripura":"03812315879",
-        "Uttarakhand":"104",
-        "Uttar Pradesh":"18001805145",
-        "West Bengal":"1800313444222",
-        "Andaman and NicobarIslands":"03192232102",
-        "Chandigarh":"9779558282",
-        "Dadra and Nagar Haveli":"104",
-        "Daman & Diu":"104",
-        "Delhi":"01122307145",
-        "Jammu & Kashmir":"01912520982",
-        "Ladakh":"01982256462",
-        "Lakshadweep":"104",
-        "Puducherry":"104"
+    global jsonData
+    jsonData = {
+        "Andhra Pradesh" : "08662410978",
+        "Arunachal Pradesh" : "9436055743",
+        "Assam" : "6913347770",
+        "Bihar" : "104",
+        "Chhattisgarh" : "104",
+        "Goa" : "104",
+        "Gujarat" : "104",
+        "Haryana" : "8558893911",
+        "Himachal Pradesh" : "104",
+        "Jharkhand" : "104",
+        "Karnataka" : "104",
+        "Kerala" : "04712552056",
+        "Madhya Pradesh" : "104",
+        "Maharashtra" : "02026127394",
+        "Manipur" : "3852411668",
+        "Meghalaya" : "108",
+        "Mizoram" : "102",
+        "Nagaland" : "7005539653",
+        "Odisha" : "9439994859",
+        "Punjab" : "104",
+        "Rajasthan" : "01412225624",
+        "Sikkim" : "104",
+        "Tamil Nadu" : "04429510500",
+        "Telangana" : "104",
+        "Tripura" : "03812315879",
+        "Uttarakhand" : "104",
+        "Uttar Pradesh" : "18001805145",
+        "West Bengal" : "1800313444222",
+        "Andaman And Nicobar Islands" : "03192232102",
+        "Chandigarh" : "9779558282",
+        "Dadra And Nagar Haveli" : "104",
+        "Daman And Diu" : "104",
+        "Delhi" : "01122307145",
+        "Jammu And Kashmir" : "01912520982",
+        "Ladakh" : "01982256462",
+        "Lakshadweep" : "104",
+        "Puducherry" : "104"
     }
-
+    
     key = input("Enter name of state or union territory: ")
-    key = key.title()
-    if key in listHelp.keys():
-        print(f"\n\nHelpline number for {key}: {listHelp[key]}")
-        del listHelp
+    print("\nPlease wait... Looking up data...")
+    if key.title() in jsonData.keys():
+        print(f"\n\nHELPLINE NUMBER FOR {key.title().upper()}, INDIA: {jsonData[key.title()]}")
     else:
-        del listHelp
         print(f"\n\nError: Wrong spelling")
+    del jsonData
 
 
 def user_menu():
