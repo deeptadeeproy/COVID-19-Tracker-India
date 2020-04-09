@@ -69,7 +69,7 @@ def for_area():
             get_data("https://api.covid19india.org/state_district_wise.json")
             confirmed = jsonData[state]["districtData"][district]["confirmed"]
             del jsonData
-            print(f"Confirmed positive COVID-19 cases in the searched area: {confirmed}")
+            print(f"CONFIRMED POSITIVE COVID-19 CASES IN THE SEARCHED AREA: {confirmed}")
         else:
             print("\nError: Invalid pincode.")
             reruns()
