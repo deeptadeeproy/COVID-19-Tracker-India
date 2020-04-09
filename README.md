@@ -3,6 +3,8 @@
 A simple, fast program to get various kinds of information about the status of COVID-19 in India.<br />
 This program has been written in Python3 and a batch file is included for hassle free execution on Windows PCs.
 
+[View on Github](https://github.com/deeptadeeproy/COVID-19-Tracker-India)
+
 
 ## Libraries
 
@@ -45,5 +47,9 @@ If you're new to Git, take a look at [this short guide](https://guides.github.co
 ## License
 
 This repository uses the [MIT License](/LICENSE).
+
+## Maintainance
+
+This repository is maintained by [deeptadeeproy](https://github.com/deeptadeeproy).
 
 **END OF README
