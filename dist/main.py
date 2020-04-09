@@ -107,7 +107,7 @@ Active: {active}
 def status_wor():
     global jsonData
     print("\nPlease wait... Requesting data...")
-    get_data("https:covidapi.info/api/v1/global")
+    get_data("https://covidapi.info/api/v1/global")
     if success:
         lastRefreshed = jsonData["date"]
         confirmed = jsonData["result"]["confirmed"]
