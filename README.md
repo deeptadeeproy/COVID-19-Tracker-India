@@ -37,14 +37,13 @@ Screenshots of the program can be downloaded from [here](https://github.com/deep
 
 ## Pull Requests
 
-I :heart: pull requests!
-I even :sparkling_heart: them if they contain well written commit messages!
+We love pull requests, especially if they contain well written commit messages!
 
 Please write the first line of your commit message in the following style:
 
-```Platform name : Change some things```
+```Platform name : Changes made```
 
-Please try to follow the [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules) like to capitalize the subject line and use the imperative mood. If there are more details to add, put those into the body of the commit message.
+Please try to follow the [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules) like to capitalize the subject line. If there are more details to add, put those into the body of the commit message.
 
 If you're new to Git, take a look at [this short guide](https://guides.github.com/introduction/git-handbook/).
 
