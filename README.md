@@ -43,7 +43,8 @@ Please write the first line of your commit message in the following style:
 
 ```Platform name : Changes made```
 
-Please try to follow the [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules) like to capitalize the subject line. If there are more details to add, put those into the body of the commit message.
+Please try to follow the [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/#seven-rules) like to capitalize the subject line.<br />
+If there are more details to add, put those into the body of the commit message.
 
 If you're new to Git, take a look at [this short guide](https://guides.github.com/introduction/git-handbook/).
 
