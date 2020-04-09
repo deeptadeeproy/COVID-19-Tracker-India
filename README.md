@@ -21,14 +21,9 @@ The following APIs have been used in this piece of software:
 
 India Postal PIN code API : <http://www.postalpincode.in/Api-Details><br />
 India Statewise Statistics API : <https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise><br />
-World Satistics API : <https://covidapi.info/api/v1/global><br />
+World Satistics API : <https://covidapi.info/api/v1/global>
 
-
-### Acknowledgement
-
-This project would not have been possible without [covid19india.org](https://covid19india.org).<br />
-The original Python script for this project has been converted to an exe file using [pyinstaller](https://codeigo.com/python/convert-py-to-exe).
-
+This project would not have been possible without [covid19india.org](https://covid19india.org).
 
 ## Screenshots
 
