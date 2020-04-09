@@ -32,11 +32,7 @@ The original Python script for this project has been converted to an exe file us
 
 ## Screenshots
 
-[Screenshot #1](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/menu.PNG)<br />
-[Screenshot #2](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option1.PNG)<br />
-[Screenshot #3](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option2.PNG)<br />
-[Screenshot #4](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option3.PNG)<br />
-[Screenshot #5](https://github.com/deeptadeeproy/COVID-19-Tracker-India-Windows-/blob/master/Screenshots/option4.PNG)
+Screenshots for the program can be downloaded from [here](https://github.com/deeptadeeproy/COVID-19-Tracker-India/tree/master/Screenshots).
 
 
 ## Pull Requests
