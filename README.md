@@ -32,9 +32,7 @@ Screenshots of the program can be downloaded from [here](https://github.com/deep
 
 ## Pull Requests
 
-We love pull requests, especially if they contain well written commit messages!
-
-Please write the first line of your commit message in the following style:
+Please include commit messages and write the first line of your commit message in the following style:
 
 ```Platform name : Changes made```
 
