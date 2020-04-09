@@ -10,16 +10,19 @@ jsonData = ""
 state = ""
 district = ""
 
-def countDigit(n): 
+
+def countDigit(n):
     count = 0
-    while n != 0: 
+    while n != 0:
         n //= 10
-        count+= 1
-    return count 
+        count += 1
+    return count
+
 
 # Function Definitions
 def get_data(url):
     try:
+        print("\nPlease wait...requesting data...")
         req = urllib.request.Request(url)
         response = urllib.request.urlopen(req)
         if response.getcode() == 200:
@@ -31,15 +34,17 @@ def get_data(url):
             print("\nError: Data not received, unknown failure occurred.")
             reruns()
     except urllib.error.URLError as err:
-        #print(err)
-        print("\nError: No or bad internet connection.")
+        print(err)
+        print("\nError: Could not connect to internet.")
         reruns()
+
 
 def arrange_address():
     # print(jsonDataOne)
     if jsonData[0]["PostOffice"]:
         print("Data received.")
-        address = jsonData[0]["PostOffice"][0]["Block"] + ", " + jsonData[0]["PostOffice"][0]["District"] + ", " + \
+        address = jsonData[0]["PostOffice"][0]["Block"] + ", " + jsonData[0]["PostOffice"][0][
+            "District"] + ", " +\
                   jsonData[0]["PostOffice"][0]["State"]
         print(f"\nYou searched for {address}.")
         del address
@@ -51,26 +56,27 @@ def arrange_address():
         print("\nError: Invalid pincode.")
         reruns()
 
+
 def for_area():
     global jsonData
     postCode = input("\nEnter PIN code: ")
     if type(postCode) == int:
         postCode = str(postCode)
     if postCode.isnumeric() and len(postCode) == 6:
-        print("\nPlease wait, requesting data...")
-        get_data("https://api.postalpincode.in/pincode/"+postCode)
+        get_data("https://api.postalpincode.in/pincode/" + postCode)
         if success:
             arrange_address()
             get_data("https://api.covid19india.org/state_district_wise.json")
             confirmed = jsonData[state]["districtData"][district]["confirmed"]
             del jsonData
-            print("Confirmed positive COVID-19 cases in your area: " + str(confirmed))
+            print(f"Confirmed positive COVID-19 cases in the searched area: {confirmed}")
         else:
             print("\nError: Invalid pincode.")
             reruns()
     else:
         print("\nError: Invalid pincode.")
         reruns()
+
 
 def status_ind():
     global jsonData
@@ -81,22 +87,38 @@ def status_ind():
         recovered = jsonData["data"]["total"]["recovered"]
         deaths = jsonData["data"]["total"]["deaths"]
         active = jsonData["data"]["total"]["active"]
-        print(f"\nCOVID-19 status report (India) as of {lastRefreshed}\n----------\nConfirmed: {confirmed}\nRecovered: {recovered}\nDeaths: {deaths}\nActive: {active}\n----------")
+        print(f'''
+COVID-19 status report (India) as of {lastRefreshed}
+----------
+Confirmed: {confirmed}
+Recovered: {recovered}
+Deaths: {deaths}
+Active: {active}
+----------''')
+
 
 def status_wor():
     global jsonData
-    get_data("https://covidapi.info/api/v1/global")
+    get_data("https:covidapi.info/api/v1/global")
     if success:
         lastRefreshed = jsonData["date"]
         confirmed = jsonData["result"]["confirmed"]
         recovered = jsonData["result"]["recovered"]
         deaths = jsonData["result"]["deaths"]
-        active = confirmed -(recovered + deaths)
-        print(f"\nCOVID-19 status report (World) as of {lastRefreshed}\n----------\nConfirmed: {confirmed}\nRecovered: {recovered}\nDeaths: {deaths}\nActive: {active}\n----------")
+        active = confirmed - (recovered + deaths)
+        print(f'''
+COVID-19 status report (World) as of {lastRefreshed}
+----------
+Confirmed: {confirmed}
+Recovered: {recovered}
+Deaths: {deaths}
+Active: {active}
+----------''')
+
 
 def statewise():
     global jsonData
-    key = input("\nEnter state name to find report: ")
+    key = input("\nEnter name of state or union territory: ")
     key = key.title()
     get_data("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
     if success:
@@ -116,16 +138,81 @@ def statewise():
         if i == 35 and boolFound == False:
             print("\nError: Wrong spelling.")
 
+
 def patdataopen():
-    webbrowser.open("https://docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml")
+    webbrowser.open("docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml")
     print("Redirected to web browser.")
-    
+
+
+def help_num():
+    listHelp = {
+        "Andhra Pradesh":"08662410978",
+        "Arunachal Pradesh":"9436055743",
+        "Assam":"6913347770",
+        "Bihar":"104",
+        "Chhattisgarh":"104",
+        "Goa":"104",
+        "Gujarat":"104",
+        "Haryana":"8558893911",
+        "Himachal Pradesh":"104",
+        "Jharkhand":"104",
+        "Karnataka":"104",
+        "Kerala":"04712552056",
+        "Madhya Pradesh":"104",
+        "Maharashtra":"02026127394",
+        "Manipur":"3852411668",
+        "Meghalaya":"108",
+        "Mizoram":"102",
+        "Nagaland":"7005539653",
+        "Odisha":"9439994859",
+        "Punjab":"104",
+        "Rajasthan":"01412225624",
+        "Sikkim":"104",
+        "Tamil Nadu":"04429510500",
+        "Telangana":"104",
+        "Tripura":"03812315879",
+        "Uttarakhand":"104",
+        "Uttar Pradesh":"18001805145",
+        "West Bengal":"1800313444222",
+        "Andaman and NicobarIslands":"03192232102",
+        "Chandigarh":"9779558282",
+        "Dadra and Nagar Haveli":"104",
+        "Daman & Diu":"104",
+        "Delhi":"01122307145",
+        "Jammu & Kashmir":"01912520982",
+        "Ladakh":"01982256462",
+        "Lakshadweep":"104",
+        "Puducherry":"104"
+    }
+
+    key = input("Enter name of state or union territory: ")
+    key = key.title()
+    if key in listHelp.keys():
+        print(f"\n\nHelpline number for {key}: {listHelp[key]}")
+        del listHelp
+    else:
+        del listHelp
+        print(f"\n\nError: Wrong spelling")
+
+
 def user_menu():
-    choice = input("\nEnter an option number:-\n1. View number of cases by PIN code\n2. View India's status report\n3. View World's status report\n4. View statewise report\n5. View COVID-19 patients database- Open in browser\n\nWaiting for user input: ")
+    choice = input('''
+Enter an option number:-
+        
+1. View number of cases by PIN code
+2. View India's status report
+3. View World's status report
+4. View statewise report
+5. View COVID-19 patients database -Open in browser
+6. Search helpline number (statewise)
+
+Waiting for user input: '''
+    )
+
     if choice:
         if type(choice) == int:
             choice = str(choice)
-            
+
         if choice == "1":
             clear_screen()
             for_area()
@@ -141,6 +228,9 @@ def user_menu():
         elif choice == "5":
             clear_screen()
             patdataopen()
+        elif choice == "6":
+            clear_screen()
+            help_num()
         else:
             print("Error: Invalid input")
             reruns()
@@ -148,25 +238,27 @@ def user_menu():
         print("\nError: Invalid input.")
     reruns()
 
-def clear_screen():
+
+def clear_screen( ):
     if os.name == "nt":
         os.system('cls')
     elif os.name == "posix" or os.name == "linux":
         os.system('clear')
 
+
 def reruns():
-    trial = input("\n\nRun program again? Enter Y to continue or N to exit: ")
-    if trial == "Y" or trial == "y":
+    ans = input("\n\nRun program again? Enter Y to continue or N to exit: ")
+    if ans == "Y" or ans == "y":
         clear_screen()
-        print("----------Program Start----------\nThis piece of software is developed by SUSH1C4T.\n")
+        print("----------Program Start----------\nThis piece of software is developed by deeptadeeproy.\n")
         user_menu()
-    elif trial == "N" or trial == "n":
+    elif ans == "N" or ans == "n":
         exit(0)
     else:
         print("\nError: Wrong input")
         reruns()
 
-#Execution starts here
-print("----------Program Start----------\nThis piece of software is developed by SUSH1C4T.")
-user_menu()
 
+# Execution starts here
+print("----------Program Start----------\nThis piece of software is developed by deeptadeeproy.")
+user_menu()
