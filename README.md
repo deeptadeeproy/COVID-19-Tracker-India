@@ -46,7 +46,7 @@ If you're new to Git, take a look at [this short guide](https://guides.github.co
 
 This repository uses the [MIT License](/LICENSE).
 
-## Maintainance
+## Maintenance
 
 This repository is maintained by [deeptadeeproy](https://github.com/deeptadeeproy).
 
